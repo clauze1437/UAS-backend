@@ -2,16 +2,14 @@
 const express = require("express");
 const router = express.Router();
 
-// import patient controller
+// import patient controller dan validasi
 const PatientsController = require("../controllers/PatientsController");
 const PatientsValidator = require("../controllers/validator/PatientsValidator");
 
-// membuat route default
 router.get("/", (req, res) => {
   res.send("Hello Everyone");
 });
 
-// membuat routing untuk patient
 router.get("/patients", PatientsController.index);
 router.post("/patients", PatientsValidator, PatientsController.store);
 router.put("/patients/:id", PatientsController.update);

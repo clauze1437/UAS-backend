@@ -1,14 +1,10 @@
-// import dotenv
 require("dotenv").config();
-
 module.exports = {
   development: {
-    username: process.env.DB_USERNAME, //Mengatur username di file .env
-    password: process.env.DB_PASSWORD, //Mengatur password di file .env
-    database: process.env.DB_DATABASE, //Mengatur database di file .env
-    host: process.env.DB_HOST, //Mengatur host di file .env
-    port: process.env.DB_PORT, //Mengatur port di file .env
-    dialect: process.env.DB_CONNECTION, //Mengatur connection di file .env
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    dialect: process.env.DB_CONNECTION,
   },
   test: {
     username: "root",
